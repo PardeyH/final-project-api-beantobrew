@@ -1,0 +1,38 @@
+### Register a new user
+POST {{host}}/register
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "newpassword"
+}
+
+### Login request
+POST {{host}}/login
+Content-Type: application/x-www-form-urlencoded
+
+userName=newuser
+    &password=newpassword
+
+### Logout request
+POST {{host}}/logout
+
+### Show Level
+GET {{host}}/level/1
+
+### Show Level
+GET {{host}}/level/2
+
+### Show CarLevel
+GET {{host}}/car/1
+
+###
+GET {{host}}/score/userName
+
+### check answer request
+POST {{host}}/check-answer
+Content-Type: application/x-www-form-urlencoded
+
+{
+  "userAnswer": "Coffee is typically grown from seed, and each tree takes on average between 3 to 5 years to bear fruit."
+}
