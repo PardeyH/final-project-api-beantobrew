@@ -22,8 +22,7 @@ public class AiService {
         String url = "https://ai.bulbt.com/gpt";
         // String url = "http://localhost:8090/gpt";
         UriComponentsBuilder builder = UriComponentsBuilder.fromHttpUrl(url)
-                // Do not share this on the internet please 🤞
-                .queryParam("secret", "useaiforthebetter")
+                // Here I deleted a line of code because I don't want to share a token to the public
 
                 // How long should be the overall result
                 .queryParam("maxTokens", "500")
