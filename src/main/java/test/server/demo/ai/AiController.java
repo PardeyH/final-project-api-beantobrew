@@ -85,12 +85,12 @@ public class AiController {
                     userAnswer.addScore(correctnessPercentage);
                     aiResponseJson.addProperty("correctnessPercentage", correctnessPercentage);//neu
 
-                    ResponseEntity<Score> response = scoreController.saveScore(userName, (int) correctnessPercentage ); // Aufruf der saveScore Methode
+                    ResponseEntity<Score> response = scoreController.saveScore(userName, (int) correctnessPercentage ); // calling saveScore() method
                     if (response.getStatusCode() == HttpStatus.OK)
                         // If the correctness percentage is 75% or higher, consider it correct
                         return new ResponseEntity<>("Correct", HttpStatus.OK);
                 } else {
-                    aiResponseJson.addProperty("correctnessPercentage", correctnessPercentage);//neu
+                    aiResponseJson.addProperty("correctnessPercentage", correctnessPercentage);
                     return new ResponseEntity<>("Incorrect", HttpStatus.OK);
                 }
             } catch (NumberFormatException e) {
