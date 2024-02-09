@@ -1,17 +1,6 @@
 # Welcome to *api-bean-to-brew* --- 🫘 Bean to Brew ☕️
 
-- Access endpoint under https://api-bean-to-brew.bulbt.com/greeting
-- For testing out all default endpoints have a look at [endpoints.http](endpoints.http)
+This code is from my final project during my Java bootcamp in summer 2023.
 
-## For teachers
-### Steps for setting up a new spring-boot project
-1. Fork this project with a new name e.g. `api-java-islands`
-2. Set required secret `SSH_KEY_PRIVATE` for the fork
-3. Enable Github Actions workflow explictly by click on Actions for each repo, then showing: *Workflows aren’t being run on this forked repository .. Go ahead and enable them.*
-4. Create a new application in dokku: `ssh -t dokku@168.119.171.224 apps:create api-java-islands`
-5. Parametrize project with following script
-```bash
-brew install gnu-sed
-grep -ilr "api-bean-to-brew" . | grep -v ".git/" | grep -v ".idea/" | xargs gsed -i s/api-bean-to-brew/api-bean-to-brew/g
-```
-6. Push changes, CI/CD should be triggered now and go through
+I created this API to store user information, as well as trivia questions and level data for my game.
+The answers to those trivia questions is received by this backend from my frontend and then checked by chatgpt-3 via prompt. 
